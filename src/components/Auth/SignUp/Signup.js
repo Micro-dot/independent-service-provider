@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, {useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -21,6 +21,14 @@ const Signup = () => {
     }
     const handleFormSignin = event =>{
         event.preventDefault();
+        if(password !== confirmPassword){
+            setError('Password did not match');
+            return;
+        }
+        createUserWithEmailAndPassword(email,password);
+    }
+    if(user){
+       return navigate('/home');
     }
     return (
         <div className="login-container">
@@ -30,6 +38,7 @@ const Signup = () => {
                 <input onChange={handleEmail} type="text" placeholder="Your Email" />
                 <input onChange={handlePassword} type="password" name="" id="" placeholder='password' />
                 <input onChange={handleConfirmPassword} type="password" placeholder="confirm password" />
+                <p className='error-message'>{error}</p>
                 <button>Sign up</button>
             </form>
 
