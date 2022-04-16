@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Powerlifting",
+        "price": "500",
+        "description": "This are specifically purpose built facilities for this type of athletic pursuit. You’ll see a lot of weightlifting platforms and racks in this type of gym, and not a lot of cardio or weight machines.",
+        "img": "https://getgymfit.com.au/wp-content/uploads/2021/11/14.jpg?ezimgfmt=rs:780x439/rscb18/ng:webp/ngcb18"
+    },
+    {
+        "id": 2,
+        "name": "Boutique Gym",
+        "price": "700",
+        "description": "Boutique wellness studios are aesthetically beautiful in nature, friendly and social environments and they’re more of a community than a just a gym.Boutique gyms offer dedicated group fitness classes, in particular – yoga, pilates and tone style.",
+        "img": "https://www.wealthmanagement.com/sites/wealthmanagement.com/files/styles/article_featured_retina/public/gym-empty-GettyImages-898407368-1540.jpg?itok=9iN3OCZ5"
+    },
+    {
+        "id": 3,
+        "name": "Big Box Gyms",
+        "price": "1000",
+        "description": "The first type of gym out there are big box gyms. I once heard a gym owner describe box box gyms to me bluntly (and somewhat humorously too.‘You’re pretty much paying for a big room full of fitness equipment. Unless you pay extra, you don’t get a lot of support’.",
+        "img": "https://abcfitness.com/wp-content/uploads/Oct14_BigBox.jpg"
+    }
+]

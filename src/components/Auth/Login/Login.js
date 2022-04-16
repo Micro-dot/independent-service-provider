@@ -5,7 +5,6 @@ import auth from '../../../firebase.init';
 import "./Login.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Button} from 'react-bootstrap';
 
 const Login = () => {
     const navigate = useNavigate();
