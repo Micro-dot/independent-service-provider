@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button, Card, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Button, Card} from 'react-bootstrap';
 
 const Service = ({ service }) => {
     const { title, name, img, description, price } = service
