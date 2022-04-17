@@ -38,7 +38,7 @@
     margin-bottom: 4px;
     color: gray;
     margin: 15px 0 5px 5px;
-    
+
 }
 
 .login-container input::placeholder {
@@ -46,7 +46,8 @@
 }
 
 .login-container input {
-    background: #00f75f;;
+    background: #00f75f;
+    ;
     margin: 15px 0 0 0;
     padding: 10px;
     padding-left: 20px;
@@ -75,8 +76,20 @@
 }
 
 
-.error-message{
+.error-message {
     font-size: 12px;
     color: red;
-    margin:10px;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .login-container {
+        position: relative;
+        width: 390px;
+        margin: 4rem auto;
+        height: 550px;
+        border-radius: 20px;
+        padding: 40px;
+        background: #ecf0f3;
+    }
 }

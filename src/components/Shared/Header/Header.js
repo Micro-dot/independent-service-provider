@@ -4,6 +4,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import logo from '../../../images/logo.png';
 import './Header.css';
 
 const Header = () => {
@@ -14,9 +15,9 @@ const Header = () => {
         navigate('/login');
     }
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
-            <Container className='d-flex justify-content-center'>
-                <Navbar.Brand as={Link} to="/">React-Bootstrap</Navbar.Brand>
+        <Navbar collapseOnSelect expand="lg" bg="secondary" variant="dark" >
+            <Container>
+                <Navbar.Brand  as={Link} to="/"><img src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav id='nav-link' className="me-auto">
