@@ -2,10 +2,9 @@
     position: relative;
     width: 400px;
     margin: 4rem auto;
-    height: 650px;
+    height: 550px;
     border-radius: 20px;
     padding: 40px;
-    /* box-sizing: border-box; */
     background: #ecf0f3;
 }
 
@@ -47,7 +46,7 @@
 }
 
 .login-container input {
-    background: #ecf0f3;
+    background: #00f75f;;
     margin: 15px 0 0 0;
     padding: 10px;
     padding-left: 20px;

@@ -32,12 +32,12 @@ const Signup = () => {
     }
     return (
         <div className="login-container">
-            <div className="login-title">Sign up</div>
+            <div className="login-title">SIGN UP</div>
 
             <form onSubmit={handleFormSignin} className="login-form">
-                <input onChange={handleEmail} type="text" placeholder="Your Email" />
-                <input onChange={handlePassword} type="password" name="" id="" placeholder='password' />
-                <input onChange={handleConfirmPassword} type="password" placeholder="confirm password" />
+                <input onChange={handleEmail} type="text" placeholder="Your Email" required/>
+                <input onChange={handlePassword} type="password" name="" id="" placeholder='password' required/>
+                <input onChange={handleConfirmPassword} type="password" placeholder="confirm password" required/>
                 <p className='error-message'>{error}</p>
                 <button>Sign up</button>
             </form>
@@ -52,8 +52,6 @@ const Signup = () => {
 
             <div>
                 <button>Google</button>
-                <button>Facebook</button>
-                <button>Github</button>
             </div>
 
         </div>
