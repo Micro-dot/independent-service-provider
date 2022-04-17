@@ -1,0 +1,6 @@
+.picture img {
+    height: 400px;
+    width: 370px;
+    border: 7px solid rgb(9, 122, 14);
+    border-radius: 50%;
+}
