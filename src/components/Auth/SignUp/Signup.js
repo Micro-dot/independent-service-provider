@@ -1,15 +1,19 @@
 import React, {useState } from 'react';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 
 const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
+    const location = useLocation();
+    let from = location.state?.from?.pathname || '/'
     const navigate = useNavigate();
-    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
+    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth,{ sendEmailVerification: true });
+    const [signInWithGoogle, user1, loading, error1] = useSignInWithGoogle(auth);
     const handleEmail = event =>{
         setEmail(event.target.value)
     }
@@ -27,8 +31,11 @@ const Signup = () => {
         }
         createUserWithEmailAndPassword(email,password);
     }
-    if(user){
-       return navigate('/home');
+    if (user || user1) {
+        navigate(from, { replace: true });
+    }
+    if(loading){
+        return <Loading></Loading>
     }
     return (
         <div className="login-container">
@@ -38,7 +45,7 @@ const Signup = () => {
                 <input onChange={handleEmail} type="text" placeholder="Your Email" required/>
                 <input onChange={handlePassword} type="password" name="" id="" placeholder='password' required/>
                 <input onChange={handleConfirmPassword} type="password" placeholder="confirm password" required/>
-                <p className='error-message'>{error}</p>
+                <p className='error-message'>{error || error1?.message}</p>
                 <button>Sign up</button>
             </form>
 
@@ -51,7 +58,7 @@ const Signup = () => {
             </div>
 
             <div>
-                <button>Google</button>
+                <button onClick={()=>signInWithGoogle()}>Google</button>
             </div>
 
         </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import "./Login.css";
 import { ToastContainer, toast } from 'react-toastify';
@@ -15,7 +15,7 @@ const Login = () => {
     let from = location.state?.from?.pathname || '/'
     const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
-
+    const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
     const handleEmail = event => {
         setEmail(event.target.value);
     }
@@ -35,10 +35,10 @@ const Login = () => {
             toast('please enter your email address');
         }
     }
-    if (loading) {
+    if (loading || loading1) {
         return <Loading></Loading>
     }
-    if (user) {
+    if (user || user1) {
         navigate(from, { replace: true });
     }
 
@@ -49,7 +49,7 @@ const Login = () => {
             <form onSubmit={handleFromLogin} className="login-form">
                 <input onChange={handleEmail} type="text" placeholder="Your Email" required />
                 <input onChange={handlePassword} type="password" placeholder="password" required />
-                <p className='error-message'>{error?.message}</p>
+                <p className='error-message'>{error?.message || error1?.message}</p>
                 <p className='btn btn-link text-primary pe-auto text-decoration-none' onClick={handlepasswordreset} variant="link">Forget Password</p>
                 <button>Login</button>
             </form>
@@ -61,9 +61,9 @@ const Login = () => {
                 <p className='mt-2 px-2'> or </p>
                 <div style={{ height: '1px' }} className='bg-dark w-50'></div>
             </div>
-
+            
             <div>
-                <button>Google</button>
+                <button onClick={()=>signInWithGoogle()}>Google</button>
             </div>
             <ToastContainer />
         </div>
