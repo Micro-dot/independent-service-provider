@@ -1,15 +1,18 @@
 .footer-clean {
     padding: 50px 0;
     background-color: rgb(78, 75, 75);
-    color: #fffbfb;
-    
+    color: cyan;
+}
+.footer-clean .item {
+    text-align: start;
 }
 
 .footer-clean h3 {
     margin-bottom: 12px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
+    color:snow;
 }
 
 .footer-clean ul {
@@ -35,7 +38,6 @@
 
 @media (max-width:767px) {
     .footer-clean .item {
-        text-align: center;
         padding-bottom: 20px;
     }
 }

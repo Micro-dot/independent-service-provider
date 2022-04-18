@@ -2,6 +2,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+.services{
+    margin-bottom: 10px;
+}
 
 @media only screen and (max-width: 600px) {
     .service-container {

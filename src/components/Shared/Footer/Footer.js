@@ -9,7 +9,7 @@ const Footer = () => {
         <div class="footer-clean">
             <footer>
                 <div class="container">
-                    <div class="row justify-content-center">
+                    <div class="row">
                         <div class="col-sm-4 col-md-3 item">
                             <h3>Services</h3>
                             <ul>
