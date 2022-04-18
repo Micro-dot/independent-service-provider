@@ -92,7 +92,7 @@
         padding: 40px;
         background: #ecf0f3;
     }
-    Button img{
+    button .google{
         width: 25px;
         height: 25px;
     }
