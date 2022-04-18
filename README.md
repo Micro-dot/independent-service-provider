@@ -12,9 +12,9 @@ Live Site: https://jack-stick.web.app/
 * If you are logged in to my site, you can access my secret path (checkout).
 
 ## What Library we use this project.
-* 01. Bootstrap.
-* 02. React.
-* 03. React-firebase-hook (For Authentication)
-* 04. Raw CSS
-* 05. Java Script
+* Bootstrap.
+* React.
+* React-firebase-hook (For Authentication)
+* Raw CSS
+* Java Script
 
