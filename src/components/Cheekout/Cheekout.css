@@ -80,3 +80,8 @@
     color: red;
     margin:10px;
 }
+@media only screen and (max-width: 600px) {
+    .form-container {
+        width: 350px;
+    }
+}

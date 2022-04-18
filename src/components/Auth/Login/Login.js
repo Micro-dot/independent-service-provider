@@ -66,7 +66,7 @@ const Login = () => {
             <div>
                 <button
                     onClick={() => signInWithGoogle()}>
-                        <img width={25} className="me-1" src={google} alt="" />
+                        <img width={25} className="me-1 google" src={google} alt="" />
                     <span>Google</span>
                 </button>
             </div>

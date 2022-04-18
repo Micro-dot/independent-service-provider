@@ -92,4 +92,8 @@
         padding: 40px;
         background: #ecf0f3;
     }
+    Button img{
+        width: 25px;
+        height: 25px;
+    }
 }
