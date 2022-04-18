@@ -1,6 +1,6 @@
 # Getting Started with Big Gym Site
 
-Live Site:
+Live Site: https://jack-stick.web.app/
 
 ## What I did on my site
 
