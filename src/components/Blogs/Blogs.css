@@ -1,0 +1,14 @@
+.blog{
+    margin: 0 100px;
+}
+.blog p{
+    font-size: large;
+}
+.blog span{
+    font-size: 25px;
+}
+@media only screen and (max-width: 600px) {
+    .blog{
+        margin: 0 10px;
+    }
+}

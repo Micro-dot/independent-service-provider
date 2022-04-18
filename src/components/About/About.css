@@ -4,3 +4,20 @@
     border: 7px solid rgb(9, 122, 14);
     border-radius: 50%;
 }
+.text{
+    color:yellowgreen;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+    .picture img {
+        height: 330px;
+        width: 300px;
+        border: 7px solid rgb(9, 122, 14);
+        border-radius: 50%;
+    }
+
+    #picture {
+        text-align: center;
+    }
+}

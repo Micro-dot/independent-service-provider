@@ -3,6 +3,7 @@ import './App.css';
 import About from './components/About/About';
 import Login from './components/Auth/Login/Login';
 import Signup from './components/Auth/SignUp/Signup';
+import Blogs from './components/Blogs/Blogs';
 import Cheekout from './components/Cheekout/Cheekout';
 import Home from './components/Home/Home';
 import RequireAuth from './components/RequireAuth/RequireAuth';
@@ -22,6 +23,7 @@ function App() {
             <Cheekout></Cheekout>
           </RequireAuth>
         }></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
