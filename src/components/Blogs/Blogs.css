@@ -1,5 +1,9 @@
 .blog{
     margin: 0 100px;
+    text-align: start;
+}
+.blog li{
+    margin-left: 15px;
 }
 .blog p{
     font-size: large;

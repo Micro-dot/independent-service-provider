@@ -3,7 +3,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-fi
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
-
+import google from '../../../images/Google.png';
 const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -58,7 +58,9 @@ const Signup = () => {
             </div>
 
             <div>
-                <button onClick={()=>signInWithGoogle()}>Google</button>
+                <button onClick={()=>signInWithGoogle()}>
+                <img width={25} className="me-1" src={google} alt="" />
+                Google</button>
             </div>
 
         </div>

@@ -6,6 +6,7 @@ import "./Login.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../../Shared/Loading/Loading';
+import google from '../../../images/Google.png'
 
 const Login = () => {
     const navigate = useNavigate();
@@ -61,9 +62,13 @@ const Login = () => {
                 <p className='mt-2 px-2'> or </p>
                 <div style={{ height: '1px' }} className='bg-dark w-50'></div>
             </div>
-            
+
             <div>
-                <button onClick={()=>signInWithGoogle()}>Google</button>
+                <button
+                    onClick={() => signInWithGoogle()}>
+                        <img width={25} className="me-1" src={google} alt="" />
+                    <span>Google</span>
+                </button>
             </div>
             <ToastContainer />
         </div>
