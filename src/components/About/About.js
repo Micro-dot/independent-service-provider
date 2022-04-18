@@ -11,7 +11,7 @@ const About = () => {
                 <div className='ms-lg-5'>
                     <h1>Hey. What's Up?</h1>
                     <p className=' text fs-4'>
-                        I am Mahfuzur Rahman - a junior web developer and learner of Programming Hero. Develop unknown information using acquired knowledge. Hold on like glue until the unfinished work is finish. Achieve new knowledge in new days. To fill one's own deficit. Finally, build myself at the top of the full stack web development.
+                        I am Mahfuzur Rahman - a junior web developer and learner of Programming Hero. Interest in knowing unknown information using own acquired knowledge. Hold on like glue until the unfinished work is finish. Achieve new knowledge in new days. To fill one's own deficit. Finally, get myself to the top of the whole full stack web development reach.
                     </p>
                 </div>
                 
